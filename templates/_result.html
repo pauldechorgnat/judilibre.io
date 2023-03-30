@@ -1,0 +1,9 @@
+<div class="result-container" onclick="go_to_decision('{{doc.id}}')">
+    <div class="result-jurisdiction">
+        {{doc.jurisdiction_name}}
+    </div>
+    <div class="result-date">
+        {{doc.date}} - {{doc.number}}
+    </div>
+    {{doc.text[:30]}}
+</div>

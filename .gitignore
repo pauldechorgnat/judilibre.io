@@ -1,0 +1,8 @@
+venv
+.ipynb_checkpoints
+.chroma
+chroma*
+ca_data.json
+cc_data.json
+data.json
+__pycache__

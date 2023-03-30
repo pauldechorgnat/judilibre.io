@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judilibre alternative</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}"/>
+    
+    
+    
+</head>
+<body>
+    <script>
+        go_to_decision = function(decision_id) {
+            window.location = "/decision/" + decision_id 
+        }
+    </script>
+    <div class="header">
+        <!-- <img src="{{url_for('static', filename='css/cour-de-cassation.svg')}}" alt="Logo de la cour de cassation"> -->
+        <h1><a href="/">Judilibre.io</a></h1>
+    </div>
+    <div class="search-box">
+        <form id="form-search" method="POST" action="/">
+            <input type="text" id="search-input" placeholder="article 700 du code de procédure civile, ..." form="form-search"/>
+            <input type="submit" hidden form="form-search"/>
+        </form>
+    </div>
+    <div class="decision-container">
+        <h2>{{decision.jurisdiction_name}}</h2>
+        <h3>{{decision.date}}</h3>
+        {{decision.text}}
+    </div>
+    
+</body>
+</html>
